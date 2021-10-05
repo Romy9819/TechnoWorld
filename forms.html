@@ -1,0 +1,147 @@
+<!Doctype html>
+	<html lang ="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Registration</title>
+
+		<h1>Registration Form for Free AI and Data Science Online Course</h1>
+		
+		<style type="text/css">
+			body{
+				background-image : url(https://biacon.net/wp-content/uploads/2019/02/registration-form-background-images-7.jpg) ;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				}
+			.required_field::after{
+				content:"*";
+				color:red;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function data(){
+				fname = document.getElementById('fname');
+				lname = document.getElementById('lname');
+				alert("Hello "+ fname +" "+ lname);
+			}
+			function validation() {
+				var validaton_1 = document.getElementById('vali_1');
+				var validation_2 = document.getElementById('vali_2');
+
+				flag = true;
+				pattern = /^\d{1,3}$/;
+
+				if(!pattern.test(validaton_1.value)){
+					flag = false;
+					alert("Error: Please proceed acc to the format for validaton_1");
+				}
+				if(!pattern.test(validation_2.value)){
+					flag = false
+					alert("Error: Please proceed acc to the format for validaton_2");
+				}
+
+				if (flag) {
+					var result = parseFloat(validaton_1.value) + parseFloat(validation_2.value);
+					alert("SUCCESS");
+					document.getElementById('result').innerHTML = "Result is " + result;
+					document.getElementById('result').style.backgroundColor='#90EE90';
+				}
+				else {
+					document.getElementById('result').innerHTML = "Invalid result due to invalid inputs";
+					document.getElementById('result').style.backgroundColor='#FF7276';
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+	    <fieldset>
+			<legend><h3>Fill it up:</h3></legend>
+			<form action="SQL_con.php" autocomplete="on" method="post"> <!--unlike get method, post method will not display data in url-->
+				<label class="required_field" for="fname">First name</label>
+				<input type="text" name="fname" id="fname" required autofocus><br><br>
+				
+				<label class="required_field" for="lname">Last name</label>
+				<input type="text" name="lname" id="lname" required><br><br>
+
+				<!------------------------------------------------------------------------------------------------------------------------------->
+
+				<label>Validation_1</label>
+				<input type="text" id="vali_1" placeholder="Upto 3 digits"><br><br>
+
+				<label>Validation_2</label>
+				<input type="text" id="vali_2" placeholder="Upto 3 digits"><br>
+				
+				<input type="button" onclick="validation()" value="Add"><br><br>
+				<span id="result" style="background-color: lightgreen;"></span>
+
+				<!------------------------------------------------------------------------------------------------------------------------------->
+
+				<p class="required_field">Sex: </p>
+				<input type="radio" id="male" name="sex" value="Male" required>
+				<label for="male">Male</label><br>
+				<input type="radio" id="female" name="sex" value="Female" required>
+				<label for="female">Female</label><br>
+				<input type="radio" id="transgender" name="sex" value="Transgender" required>
+				<label for="transgender">Transgender</label><br><br>
+
+				<label class="required_field" for="DOB" >Date Of Birth</label>
+				<input type="date" name="DOB"><br><br>
+				
+				<label class="required_field" for="email">E-mail</label>
+				<input type="E-mail" name="email" required><br><br>
+				
+				<label class="required_field" for="password">Password</label>
+				<input type="password" name="password" id="password" required=""><br><br>
+
+				<label class="required_field" for="mobile">Phone Number</label>
+				<input type="number" name="mobile" id="mobile" required><br><br>
+				
+				<label class="required_field" for="priority">Priority in AI, Data Science and Machine learning</label>
+				<input list="priority" name="courses" required><br><br>
+				<datalist id="priority">
+					<option value="AI">
+					<option value="Data Science">
+					<option value="Basics of machine learning">
+				</datalist><br><br>
+				
+				<p>Which all programming languages you know</p>
+				<input type="checkbox" id="C" name="languages" value="C">
+				<label for="C" >C</label><br>
+				<input type="checkbox" id="C++" name="languages" value="C++">
+				<label for="C++" >C++</label><br>
+				<input type="checkbox" id="python" name="languages" value="Python">
+				<label for="python" >Python</label><br>
+				<input type="checkbox" id="java" name="languages" value="Java">
+				<label for="java" >Java</label><br>
+				<input type="checkbox" id="html" name="languages" value="HTML">
+				<label for="html" >HTML</label><br><br>
+
+				<label for="other_languages">Other languages you know</label>
+				<input type="text" id="other_languages" name="languages"><br><br> 
+				
+				<label class="required_field" for="languages">Choose your favourite languages</label><br><br>
+				<select id="languages" name="languages" size="4" multiple required>
+					<option value="C">C</option>
+					<option value="C++">C++</option>
+					<option value="Java">Java</option>
+					<option value="Python">Python</option>
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="javascript">javascript</option>
+				</select><br><br>
+				
+				<textarea name="comment" rows="10" cols="60" placeholder="Why do you want to learn AI and Data science"></textarea><br><br>
+
+				<input type="reset" name="reseting">
+				
+				<button type="button" onclick="data();">Verify</button><br><br>
+			</fieldset>
+			
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+
+	</html>
