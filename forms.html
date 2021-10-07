@@ -1,0 +1,330 @@
+<!Doctype html>
+	<html lang ="en">
+	<head>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+			  <link
+			      rel="stylesheet"
+			      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			    />
+		  <link rel="stylesheet" type="text/css" href="style.css">
+
+		<title>Registration</title>
+		
+		<style type="text/css">
+			body{
+				background-image : url(background.png) ;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				background-position: center;
+				background-size: cover;
+				}
+			.required_field::after{
+				content:"*";
+				color:red;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function data(){
+				fname = document.getElementById('fname');
+				lname = document.getElementById('lname');
+				alert("Hello "+ fname +" "+ lname);
+			}
+			function validation() {
+				var validaton_1 = document.getElementById('vali_1');
+				var validation_2 = document.getElementById('vali_2');
+
+				flag = true;
+				pattern = /^\d{1,3}$/;
+
+				if(!pattern.test(validaton_1.value)){
+					flag = false;
+					alert("Error: Please proceed acc to the format for validaton_1");
+				}
+				if(!pattern.test(validation_2.value)){
+					flag = false
+					alert("Error: Please proceed acc to the format for validaton_2");
+				}
+
+				if (flag) {
+					var result = parseFloat(validaton_1.value) + parseFloat(validation_2.value);
+					alert("SUCCESS");
+					document.getElementById('result').innerHTML = "Result is " + result;
+					document.getElementById('result').style.backgroundColor='#90EE90';
+				}
+				else {
+					document.getElementById('result').innerHTML = "Invalid result due to invalid inputs";
+					document.getElementById('result').style.backgroundColor='#FF7276';
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<!--Navbar part begins---------------------------------------------------->
+
+		   <div class="nav-container active">
+		   		<nav>
+		   			<ul class="mobile-nav active">
+		   				<li>
+		   					<div class="menu-icon-container">
+		   						<div class="menu-icon">
+		   							<span class="line1"></span>
+		   							<span class="line2"></span>
+		   						</div>
+		   					</div>
+		   				</li>
+		   				<li>
+		   					<a href="index.html" class="logo"></a>
+		   				</li>
+		   				<li>
+		   					<a href="" class="bag"></a>
+		   				</li>
+		   			</ul>
+		   			<ul class="desktop-nav">
+		   				<li>
+		   					<a class="logo" href="index.html"></a>
+		   				</li>
+		   				<li>
+		   					<a href="index.html">Home</a>
+		   				</li>
+		   				<li>
+		   					<a href="http://localhost/Project/forms.html">Courses</a>
+		   				</li>
+		   				<li>
+		   					<a href="#">About us</a>
+		   				</li>
+		   				<li>
+		   					<a href="http://localhost/Project/contact.html">Contact</a>
+		   				</li>
+		   				<li>
+		   					<a href="#">Products</a>
+		   				</li>
+		   				<li>
+		   					<a href="#">Cart</a>
+		   				</li>
+		   				<li>
+		   					<a class="search" href="#"><i style="color: white; padding-top: 20px;" class="fa fa-search"></i></a>
+		   				</li>
+		   				<li>
+		   					<a class="bag" href="#"></a>
+		   				</li>
+		   			</ul>
+		   		</nav>
+
+		   		<div class="search-container hide">
+		   			<div class="search"></div>
+		   			<div class="search-bar">
+		   				<form>
+		   					<input type="text" placeholder="Search">
+		   				</form>
+		   			</div>
+		   			<div class="close-search"></div>
+		   			<div class="quick-links">
+		   				<h2>Quick-links</h2>
+		   				<ul>
+		   					<li>
+		   						<a href="index.html">Home</a>
+		   					</li>
+		   					<li>
+		   						<a href="http://localhost/Project/forms.html">Courses</a>
+		   					</li>
+		   					<li>
+		   						<a href="">About us</a>
+		   					</li>
+		   					<li>
+		   						<a href="http://localhost/Project/contact.html">Contact</a>
+		   					</li>
+		   					<li>
+		   						<a href="">Products</a>
+		   					</li>
+		   				</ul>
+		   			</div>
+		   		</div>
+
+		   		<div class="mobile-search-container">
+		   			<div class="search"></div>
+		   			<div class="search-bar">
+		   				<form>
+		   					<input type="text" placeholder="Search">
+		   				</form>
+		   			</div>
+		   			<span class="cancel">Cancel</span>
+		   			<div class="quick-links">
+		   				<h2>Quick-links</h2>
+		   				<ul>
+		   					<li>
+		   						<a href="index.html">Home</a>
+		   					</li>
+		   					<li>
+		   						<a href="http://localhost/Project/forms.html">Courses</a>
+		   					</li>
+		   					<li>
+		   						<a href="">About us</a>
+		   					</li>
+		   					<li>
+		   						<a href="http://localhost/Project/contact.html">Contact</a>
+		   					</li>
+		   					<li>
+		   						<a href="">Products</a>
+		   					</li>
+		   				</ul>
+		   			</div>
+		   		</div>
+		   </div>
+
+		   <div class="overlay"></div>
+		   	<script type="text/javascript" src="main.js"></script>
+		   <br>
+
+		<!--Navbar part ends-------------------------------------------------->
+
+		<h1 style=" text-align: center; padding: 60px;">Register Now to Enroll for Free AI and Data Science Online Course</h1>
+
+	    <fieldset style="padding-left: 20px;">
+			<legend><h3>Fill it up:</h3></legend>
+			<form action="http://localhost/Project/SQL_con.php" autocomplete="on" method="post"> <!--unlike get method, post method will not display data in url-->
+				<label class="required_field" for="fname">First name</label>
+				<input type="text" name="fname" id="fname" required autofocus><br><br>
+				
+				<label class="required_field" for="lname">Last name</label>
+				<input type="text" name="lname" id="lname" required><br><br>
+
+				<!------------------------------------------------------------------------------------------------------------------------------->
+
+				<!-- <label>Validation_1</label>
+				<input type="text" id="vali_1" placeholder="Upto 3 digits"><br><br>
+
+				<label>Validation_2</label>
+				<input type="text" id="vali_2" placeholder="Upto 3 digits"><br>
+				
+				<input type="button" onclick="validation()" value="Add"><br><br>
+				<span id="result" style="background-color: lightgreen;"></span>
+ -->
+				<!------------------------------------------------------------------------------------------------------------------------------->
+
+				<p class="required_field">Sex: </p>
+				<input type="radio" id="male" name="sex" value="Male" required>
+				<label for="male">Male</label><br>
+				<input type="radio" id="female" name="sex" value="Female" required>
+				<label for="female">Female</label><br>
+				<input type="radio" id="transgender" name="sex" value="Transgender" required>
+				<label for="transgender">Transgender</label><br><br>
+
+				<label class="required_field" for="DOB" >Date Of Birth</label>
+				<input type="date" name="DOB"><br><br>
+				
+				<label class="required_field" for="email">E-mail</label>
+				<input type="E-mail" name="email" required><br><br>
+				
+				<label class="required_field" for="password">Password</label>
+				<input type="password" name="password" id="password" required=""><br><br>
+
+				<label class="required_field" for="mobile">Phone Number</label>
+				<input type="number" name="mobile" id="mobile" required><br><br>
+				
+				<label class="required_field" for="priority">Priority in AI, Data Science and Machine learning</label>
+				<input list="priority" name="courses" required><br><br>
+				<datalist id="priority">
+					<option value="AI">
+					<option value="Data Science">
+					<option value="Basics of machine learning">
+				</datalist><br><br>
+				
+				<p>Which all programming languages you know</p>
+				<input type="checkbox" id="C" name="languages" value="C">
+				<label for="C" >C</label><br>
+				<input type="checkbox" id="C++" name="languages" value="C++">
+				<label for="C++" >C++</label><br>
+				<input type="checkbox" id="python" name="languages" value="Python">
+				<label for="python" >Python</label><br>
+				<input type="checkbox" id="java" name="languages" value="Java">
+				<label for="java" >Java</label><br>
+				<input type="checkbox" id="html" name="languages" value="HTML">
+				<label for="html" >HTML</label><br><br>
+
+				<label for="other_languages">Other languages you know</label>
+				<input type="text" id="other_languages" name="languages"><br><br> 
+				
+				<label class="required_field" for="languages">Choose your favourite languages</label><br><br>
+				<select id="languages" name="languages" size="4" multiple required>
+					<option value="C">C</option>
+					<option value="C++">C++</option>
+					<option value="Java">Java</option>
+					<option value="Python">Python</option>
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="javascript">javascript</option>
+				</select><br><br>
+				
+				<textarea name="comment" rows="10" cols="60" placeholder="Why do you want to learn AI and Data science"></textarea><br><br>
+
+				<input type="reset" name="reseting">
+				
+				<button type="button" onclick="data();">Verify</button><br><br>
+			</fieldset>
+			
+			<button type="submit">Submit</button>
+		</form>
+		<div class="bubbles">
+			<img src="bubble.png">
+			<img src="bubble.png">
+			<img src="bubble.png">
+			<img src="bubble.png">
+			<img src="bubble.png">
+			<img src="bubble.png">
+			<img src="bubble.png">
+		</div>
+		<footer class="footer">
+      <div class="links-container">
+        <h6>Navigation</h6>
+        <ul class="links-list">
+          <li class="footer-active"><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="http://localhost/Project/forms.html">Courses</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="links-container">
+        <h6>Courses</h6>
+        <ul class="links-list">
+          <li><a href="http://localhost/Project/forms.html">Course1</a></li>
+          <li><a href="#">Course2</a></li>
+          <li><a href="#">Course3</a></li>
+          <li><a href="#">Course4</a></li>
+          <li><a href="#">Course5</a></li>
+        </ul>
+      </div>
+      <div class="links-container">
+        <h6>Products</h6>
+        <ul class="links-list">
+          <li><a href="#">Section1</a></li>
+          <li><a href="#">Section2</a></li>
+          <li><a href="#">Section3</a></li>
+          <li><a href="#">Section4</a></li>
+          <li><a href="#">Section5</a></li>
+        </ul>
+      </div>
+      <div class="links-container">
+        <h6>Carts</h6>
+        <ul class="links-list">
+          <li><a href="#">Product1</a></li>
+          <li><a href="#">Product2</a></li>
+          <li><a href="#">Product3</a></li>
+          <li><a href="#">Product4</a></li>
+          <li><a href="#">Product5</a></li>
+        </ul>
+      </div>
+    </footer>
+	</body>
+
+	</html>
